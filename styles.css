@@ -1,0 +1,301 @@
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0px;
+}
+
+h1 {
+    margin: 0vh 0vw 2vh 0vw;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+h1 strong {
+    font-size: 3rem;
+}
+
+h2 {
+    margin: 2vh 0vw 4vh 0vw;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.par {
+    color: #fff;
+}
+
+.white-bkg {
+    background-color: #fff;
+}
+
+.dark-bkg {
+    background-color: #54575C;
+}
+
+.light-bkg {
+    background-color: #F9D0AA;
+}
+
+.blue-bkg {
+    background-color: rgb(15, 87, 135);
+}
+
+.light-blue-bkg {
+    background-color: #D7DEE3;
+}
+
+.code {
+    margin: 10px auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+.red-bkg {
+    background-color: #ef776e;
+}
+
+.orange-bkg {
+    background-color: #f7ac6f;
+}
+
+.yellow-bkg {
+    background-color: #ffe37e;
+}
+
+.green-bkg {
+    background-color: #acd084;
+}
+
+.dark-font {
+    color: #54575C;
+}
+
+.light-font {
+    color: #F9D0AA;
+}
+
+.white-font {
+    color: #fff;
+}
+
+.blue-font {
+    color: rgb(15, 87, 135);
+}
+
+.panel {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.container img {
+    height: 100%;
+}
+
+.top-bar,
+.bot-bar {
+    position: fixed;
+}
+
+.top-bar {
+    top: 0px;
+    width: 80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 0px;
+    line-height: 0;
+}
+
+.top-bar a {
+    display: inline-block;
+}
+
+.bot-bar {
+    bottom: 0px;
+    width: 100%;
+}
+
+.bot-but {
+    float: left;
+    width: 25%;
+    min-height: 1px;
+    padding: 0 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bot-but a,
+.bot-but div {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+}
+
+.start-xp-button {
+    margin-top: 5vh;
+    padding: 1vh 10vw;
+    float: left;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.in-scene.top-bar {
+    background-color: transparent !important;
+}
+
+.in-scene.bot-bar a,
+.in-scene.bot-bar div {
+    background-color: transparent !important;
+    color: #F9D0AA;
+}
+
+.t-table tr {
+    vertical-align: top;
+}
+
+.t-table,
+.ps-table {
+    width: 100%;
+}
+
+.ps-table img {
+    margin-right: 10px;
+    padding: 10px;
+    height: 50px;
+}
+
+.ps-table p {
+    margin: 0px;
+}
+
+@media (orientation: landscape) {
+    .panel,
+    .container {
+        padding-top: 25vh;
+        padding-bottom: 25vh;
+    }
+
+    .container {
+        height: 200vh;
+    }
+    
+    .top-bar {
+        padding-top: 3vh;
+        padding-bottom: 2vh;
+    }
+
+    .logo {
+        height: 10vh;
+    }
+
+    .in-scene .logo {
+        height: 7vh !important;
+    }
+
+    .bot-but {
+        line-height: 1.5;
+    }
+
+    .t-table img {
+        width: 10vw;
+    }
+}
+
+@media (orientation: portrait) {
+    .panel,
+    .container {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .top-bar {
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+    }
+
+    .logo {
+        height: 4vh;
+    }
+
+    .in-scene .logo {
+        height: 4vh !important;
+    }
+
+    .bot-but {
+        line-height: 2;
+    }
+
+    .t-table img {
+        width: 10vh;
+    }
+}
+
+@media  screen and (max-width: 1023px) {
+    #show-on-mobile {
+        display: block;
+    }
+
+    #show-on-desktop {
+        display: none;
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+    #show-on-mobile {
+        display: none;
+    }
+
+    #show-on-desktop {
+        display: block;
+        position: absolute;
+        top: 40%;
+        margin: 0 25vw;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.if-no-sup-hide {
+    visibility: hidden;
+    transition: all .5 ease-in-out;
+}
+
+.if-no-sup-remove {
+    display: none;
+    transition: all .5 ease-in-out;
+}

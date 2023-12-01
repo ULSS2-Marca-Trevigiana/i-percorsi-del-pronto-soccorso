@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ULSS 2 - I percorsi del Pronto Soccorso</title>
+        <meta name="description" content="Una serie di informazioni sul funzionamento del Pronto Soccorso e sui criteri di gestione delle priorità nella presa in cura dei pazienti.">
+        
+        <link rel="icon" href="img/ico/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="styles.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
+
+        <script src="https://cdn.jsdelivr.net/npm/core-js-bundle@3.33.2/minified.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.js'></script>
+        <script src="https://kit.fontawesome.com/1bbfd0af93.js" crossorigin="anonymous"></script>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="main.js"></script>
+        <script src="gestures.js"></script>
+    </head>
+    <body>
+        <div id="show-on-desktop" class="dark-font">
+            <h1>
+                Oops... Come sei finito qui?
+            </h1>
+            <h2>
+                Questa pagina è ottimizzata e distribuita solo per <strong>smartphone</strong> e <strong>tablet</strong>.
+            </h2>
+        </div>
+        <div id="show-on-mobile">
+            <a-scene
+                id="scene"
+                loading-screen="dotsColor: #F9D0AA; backgroundColor: #54575C"
+                vr-mode-ui="enterVRButton: #myEnterVRButton; enterARButton: #myEnterARButton"
+                gesture-detector>
+                <a-assets>
+                    <img id="1_percorsi" src="img/1_percorsi.png">
+                    <img id="2_ps" src="img/2_ps.png">
+                    <img id="3_triage" src="img/3_triage.png">
+                    <img id="4_codice" src="img/4_codice.png">
+                    <img id="5_attesa" src="img/5_attesa.png">
+                    <img id="6_ticket" src="img/6_ticket.png">
+                </a-assets>
+                <a-entity id="container" position="0 1.1 0" rotation="-45 0 0">
+                    <a-image id="img-1" src="#1_percorsi" width="0.5" height="0.25" position="0 0 0"></a-image>
+                    <a-image id="img-2" src="#2_ps" width="0.125" height="0.25" position="0.3625 0 0"></a-image>
+                    <a-image id="img-3" src="#3_triage" width="0.125" height="0.25" position="0.5375 0 0"></a-image>
+                    <a-image id="img-4" src="#4_codice" width="0.125" height="0.25" position="0.7125 0 0"></a-image>
+                    <a-image id="img-5" src="#5_attesa" width="0.125" height="0.25" position="0.8875 0 0"></a-image>
+                    <a-image id="img-6" src="#6_ticket" width="0.125" height="0.25" position="1.0625 0 0"></a-image>
+                </a-entity>
+                <a-camera
+                    id="camera"
+                    position="-0.15 1.25 0.15"
+                    look-controls="touchEnabled: false"
+                    gesture-handler>
+                </a-camera>
+            </a-scene>
+            <div class="bot-bar in-scene dark-font">
+                <div class="bot-but" no_af_hide>
+                    <a id="myEnterARButton" class="light-bkg" href="#" title="Accedi alla realtà aumentata">AR</a>
+                </div>
+                <div class="bot-but">
+                    <a class="light-bkg" href="index.html" title="Torna alla pagina iniziale"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div class="bot-but">
+                    <a class="light-bkg" href="html/1_percorsi.html" title="Vai alla visualizzazione 2D">2D</a>
+                </div>
+                <div class="bot-but" no_af_hide>
+                    <a id="myEnterVRButton" class="light-bkg" href="#" title="Accedi alla realtà virtuale">VR</a>
+                </div>
+            </div>
+        </div>
+        <div class="top-bar in-scene light-bkg">
+            <a href="https://www.aulss2.veneto.it">
+                <img class="logo" src="img/logo/URP_outline.svg" alt="Azienda ULSS2 - Marca Trevigiana">
+            </a>
+        </div>
+    </body>
+</html>
