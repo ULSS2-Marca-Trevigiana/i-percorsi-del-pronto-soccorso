@@ -1,4 +1,0 @@
-(waiting room), hospital, high contrast, high key, cinematic light,
-(masterpiece, top quality, best quality, official art, beautiful and aesthetic:1.3), extreme detailed, highest detailed, (ultra-detailed)
-
-(worst quality, low quality:2), overexposure, watermark, text, easynegative, ugly, (blurry:2), bad_prompt,bad-artist, bad hand, ng_deepnegative_v1_75t
