@@ -78,6 +78,36 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("A-frame supported:", aFrameSupported);
 
     let sensorsEnabled = false;
+    const clickHere = document.querySelector('.click-here');
+
+    // Function to show the arrow after 2 seconds
+    setTimeout(() => {
+        clickHere.classList.add('show-arrow');
+    }, 1000);
+
+    // Variables for scroll tracking
+    let isScrolling;
+    let lastScrollTime = Date.now();
+
+    // Function to handle scroll event
+    window.addEventListener('scroll', function() {
+        clickHere.classList.remove('show-arrow'); // Hide the arrow on scroll
+        lastScrollTime = Date.now();
+
+        // Clear the existing timeout
+        clearTimeout(isScrolling);
+
+        // Set a timeout to check if there's no scrolling after 2 seconds
+        isScrolling = setTimeout(function() {
+            const currentTime = Date.now();
+            const timeSinceLastScroll = currentTime - lastScrollTime;
+
+            if (timeSinceLastScroll >= 1000) {
+                // If no scrolling for 2 seconds, show the arrow again
+                clickHere.classList.add('show-arrow');
+            }
+        }, 1000);
+    });
 
     // Delay attaching the event listener
     setTimeout(function () {
