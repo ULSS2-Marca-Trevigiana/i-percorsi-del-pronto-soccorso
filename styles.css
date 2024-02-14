@@ -183,6 +183,23 @@ h2 {
     display: block;
 }
 
+.comment-container {
+    float: right;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.comment {
+    display: inline-block;
+    height: 100%;
+}
+
+.not-in-scene p {
+    display: inline-block;
+    margin: 0 0 0 1vw;
+    vertical-align: top;
+}
+
 .start-xp-button {
     margin-top: 5vh;
     padding: 1vh 10vw;
@@ -236,11 +253,22 @@ h2 {
         padding-bottom: 2vh;
     }
 
-    .logo {
+    .logo,
+    .comment-container {
         height: 10vh;
     }
 
-    .in-scene .logo {
+    .top-bar a {
+        line-height: 10vh;
+    }
+
+    .not-in-scene .comment {
+        height: 75%;
+        vertical-align: middle;
+    }
+
+    .in-scene .logo,
+    .in-scene .comment-container {
         height: 7vh !important;
     }
 
@@ -269,11 +297,17 @@ h2 {
         padding-bottom: 2vh;
     }
 
-    .logo {
+    .logo,
+    .comment-container {
         height: 4vh;
     }
 
-    .in-scene .logo {
+    .not-in-scene p {
+        line-height: 4vh;
+    }
+
+    .in-scene .logo,
+    .in-scene .comment-container {
         height: 4vh !important;
     }
 
