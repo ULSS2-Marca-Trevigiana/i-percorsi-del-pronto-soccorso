@@ -185,13 +185,13 @@ h2 {
 
 .comment-container {
     float: right;
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-align: center;
 }
 
 .comment {
     display: inline-block;
-    height: 100%;
+    height: 75%;
 }
 
 .not-in-scene p {
@@ -260,11 +260,6 @@ h2 {
 
     .top-bar a {
         line-height: 10vh;
-    }
-
-    .not-in-scene .comment {
-        height: 75%;
-        vertical-align: middle;
     }
 
     .in-scene .logo,
@@ -350,6 +345,10 @@ h2 {
 
     h2 {
         font-size: 1.5rem;
+    }
+
+    .comment-container {
+        display: none !important;
     }
 }
 
