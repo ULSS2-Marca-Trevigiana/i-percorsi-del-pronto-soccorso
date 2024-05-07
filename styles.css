@@ -333,6 +333,7 @@ h2 {
     #show-on-desktop {
         display: block;
         position: absolute;
+        width: 50vw;
         top: 40%;
         margin: 0 25vw;
         text-align: center;
